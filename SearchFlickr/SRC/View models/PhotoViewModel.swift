@@ -72,7 +72,7 @@ class PhotoViewModel {
     }
     
     private func appendHistory(_ element: String) {
-        if searchHistory.filter({$0 == element}).count > 0 {
+        if searchHistory.contains(element) {
             return
         }
         if searchHistory.count >= Constants.PhotoHistory.maxElement {
